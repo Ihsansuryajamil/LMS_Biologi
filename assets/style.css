@@ -1,0 +1,199 @@
+/* =========================================
+   GLOBAL RESET & VARIABLES
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-inter: 'Inter', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --gc-border: #dadce0;
+    --gc-hover: #f1f3f4;
+    --gc-text: #3c4043;
+    --gc-blue: #1967d2;
+    --primary-blue: #007bff;
+}
+
+/* =========================================
+   1. LANDING PAGE (index.html)
+========================================= */
+.landing-page {
+    font-family: var(--font-inter);
+}
+
+.landing-nav {
+    position: absolute;
+    top: 0; width: 100%;
+    padding: 20px 40px;
+    z-index: 10;
+    background: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+.school-name {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.school-name span { color: #666; font-size: 0.8rem; }
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =========================================
+   2. LOGIN PAGE (login.html)
+========================================= */
+.login-page {
+    font-family: var(--font-inter);
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    width: 900px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.login-box {
+    display: flex;
+    height: 550px;
+}
+
+.login-form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-header h2 { font-size: 1.2rem; margin: 15px 0 5px; color: #222; }
+.login-header p { font-size: 0.85rem; color: #666; margin-bottom: 30px; }
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px; top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.input-group .right-icon { left: auto; right: 15px; cursor: pointer; }
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+}
+
+.forgot-password { text-align: right; margin-bottom: 20px; font-size: 0.85rem; }
+.forgot-password a { color: var(--primary-blue); text-decoration: none; }
+
+.btn-login {
+    width: 100%; padding: 12px; background: var(--primary-blue);
+    color: white; border: none; border-radius: 8px; font-weight: 600;
+    cursor: pointer; margin-bottom: 15px;
+}
+
+.btn-outline-login {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 10px; background: white; border: 1px solid #ddd;
+    border-radius: 8px; color: #333; text-decoration: none; font-weight: 500;
+    margin-bottom: 10px; cursor: pointer; font-size: 0.9rem;
+}
+
+.login-image-container {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+    position: relative;
+}
+
+.login-image-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 30px; color: white;
+}
+
+.login-image-overlay h3 { font-size: 1.5rem; margin-bottom: 5px; }
+.login-image-overlay p { font-size: 0.9rem; color: #ddd; }
+
+/* =========================================
+   3. CLASSROOM DASHBOARD (superAdmin/dashboard.html)
+========================================= */
