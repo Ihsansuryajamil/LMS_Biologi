@@ -15,7 +15,7 @@
     <div class="sidebar">
         <div class="sidebar-header">
             <div class="school-logo">
-                <i class="fa-solid fa-school fa-2x text-primary"></i>
+                <i class="fa-solid fa-school text-primary"></i>
                 <div>
                     Sekolah<br>Nama Sekolah/ Kampus
                 </div>
@@ -23,110 +23,126 @@
         </div>
         
         <div class="user-profile">
-            <img src="default-avatar.png" alt="User">
+            <img src="https://ui-avatars.com/api/?name=Staff+Komputer&background=e0e0e0&color=333" alt="User">
             <div>
                 <div class="fw-bold">Staff Komputer</div>
                 <div class="text-muted small">Guru</div>
             </div>
         </div>
 
+        <div class="sidebar-actions">
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
+                    <span>Notifikasi</span> <i class="fa-solid fa-bell"></i>
+                </button>
+                <a href="profile.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill active bg-light text-dark">
+                    <span>Profil</span> <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+
         <nav class="nav-menu">
-            <a href="#" class="nav-link active"><i class="fa-solid fa-home"></i> Dashboard</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-book"></i> Bahan Ajar</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-clipboard-list"></i> ATP</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> Kelas</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-server"></i> Bank Soal</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-calendar-alt"></i> Jadwal</a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-chart-bar"></i> Laporan</a>
+            <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
+            <a href="class_all.html" class="nav-link active"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas</a>
+            <a href="#" class="nav-link"><i class="fa-solid fa-gear"></i> Pengaturan Website</a>
         </nav>
+
+        <div class="sidebar-footer">
+            <div class="d-flex align-items-center justify-content-between border rounded p-2 mb-2 bg-light">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="20"> <span class="fw-bold">Indonesia</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="16" class="opacity-50">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" width="16">
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline-secondary w-100 d-flex justify-content-between align-items-center rounded-pill mb-2 py-1">
+                <span>Keluar</span> <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+            <a href="../index.html" class="btn btn-light border w-100 rounded-pill py-1 text-muted">
+                Kembali ke halaman utama
+            </a>
+        </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
-        <!-- TOPBAR AKAN BERUBAH SESUAI HALAMAN -->
-        
-        <!-- KONTEN HALAMAN DIMULAI DI SINI -->
+        <div class="topbar d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex align-items-center gap-3">
+                <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+                <h5 class="mb-0 fw-bold">Buat Kelas Baru</h5>
+            </div>
+            
+        </div>
+
         <div class="content-area">
-            <!-- Isi dengan salah satu blok kode di bawah (Dashboard / Detail / Tambah) -->
-            <!-- Topbar Khusus Tambah Kelas -->
-            <div class="topbar">
-                <div class="d-flex align-items-center gap-3">
-                    <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
-                    <h5 class="mb-0">Buat Kelas Vocational</h5>
+
+            <div class="border rounded p-5 bg-white mx-auto mt-4" style="max-width: 850px;">
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-3 text-muted small fw-bold text-md-end">NAMA KELAS</div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control border-0 border-bottom rounded-0 px-0 text-secondary" value="IX B-INFORMATIKA (KOMP)" readonly>
+                    </div>
+                </div>
+
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-3 text-muted small fw-bold text-md-end">MATA PELAJARAN</div>
+                    <div class="col-md-9">
+                        <select class="form-select text-dark">
+                            <option selected>Informatika</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-3 text-muted small fw-bold text-md-end">TINGKAT</div>
+                    <div class="col-md-9">
+                        <select class="form-select text-dark">
+                            <option selected>9 SMP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-3 text-muted small fw-bold text-md-end">KODE KELAS</div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control border-0 border-bottom rounded-0 px-0">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-3 text-muted small fw-bold text-md-end mt-2">DESKRIPSI KELAS</div>
+                    <div class="col-md-9">
+                        <div class="editor-toolbar d-flex flex-wrap gap-1 align-items-center">
+                            <select class="form-select form-select-sm w-auto border-0"><option>Font</option></select>
+                            <select class="form-select form-select-sm w-auto border-0"><option>Size</option></select>
+                            <span class="text-muted px-2">|</span>
+                            <button><i class="fa-solid fa-bold"></i></button>
+                            <button><i class="fa-solid fa-italic"></i></button>
+                            <button><i class="fa-solid fa-strikethrough"></i></button>
+                            <span class="text-muted px-2">|</span>
+                            <button><i class="fa-solid fa-list-ol"></i></button>
+                            <button><i class="fa-solid fa-list-ul"></i></button>
+                        </div>
+                        <div class="editor-content bg-white" contenteditable="true">-</div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <div class="border rounded p-3 bg-white">
+                            <div class="card-cover rounded mb-3 border border-dashed" style="height: 180px;"></div>
+                            <button class="btn btn-outline-secondary w-100 py-2">Ganti Sampul</button>
+                        </div>
+                        
+                        <div class="text-end mt-4">
+                            <button class="btn btn-primary rounded-pill px-5 fw-bold"><i class="fa-solid fa-save"></i> Buat Kelas</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="content-area d-flex justify-content-center">
-                <div class="w-100" style="max-width: 800px;">
-                    
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-md-3 text-muted small fw-bold text-end">NAMA KELAS</div>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control border-0 border-bottom rounded-0 px-0" placeholder="Nama Kelas">
-                        </div>
-                    </div>
-
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-md-3 text-muted small fw-bold text-end">MATA PELAJARAN</div>
-                        <div class="col-md-9 d-flex gap-2">
-                            <select class="form-select"><option>Pilih Mata Pelajaran</option></select>
-                            <button class="btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-md-3 text-muted small fw-bold text-end">TINGKAT</div>
-                        <div class="col-md-9">
-                            <select class="form-select"><option>Pilih Tingkat</option></select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-md-3 text-muted small fw-bold text-end mt-2">ENROLL KODE</div>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control mb-2" placeholder="Masukan Enroll Kode">
-                            <div class="alert alert-info py-2 small mb-0 border-0 bg-info bg-opacity-10 text-info-emphasis">
-                                <i class="fa-solid fa-circle-info"></i> Enroll Code adalah kode rahasia untuk Anda bagikan kepada siswa yang ingin masuk ke kelas Anda.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-md-3 text-muted small fw-bold text-end mt-2">DESKRIPSI KELAS</div>
-                        <div class="col-md-9">
-                            <div class="editor-toolbar d-flex flex-wrap gap-1 align-items-center">
-                                <select class="form-select form-select-sm w-auto border-0"><option>Font</option></select>
-                                <select class="form-select form-select-sm w-auto border-0"><option>Size</option></select>
-                                <span class="text-muted px-2">|</span>
-                                <button><i class="fa-solid fa-bold"></i></button>
-                                <button><i class="fa-solid fa-italic"></i></button>
-                                <button><i class="fa-solid fa-strikethrough"></i></button>
-                                <button><i class="fa-solid fa-subscript"></i></button>
-                                <button><i class="fa-solid fa-superscript"></i></button>
-                                <span class="text-muted px-2">|</span>
-                                <button><i class="fa-solid fa-list-ol"></i></button>
-                                <button><i class="fa-solid fa-list-ul"></i></button>
-                            </div>
-                            <div class="editor-content bg-white" contenteditable="true"></div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-5">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-9">
-                            <div class="upload-cover-box">
-                                <button class="btn btn-light border position-absolute bottom-0 start-0 m-3 rounded-pill shadow-sm">
-                                    <i class="fa-regular fa-image"></i> Tambah Sampul
-                                </button>
-                            </div>
-                            <div class="text-end mt-4">
-                                <button class="btn btn-primary rounded-pill px-4"><i class="fa-solid fa-plus"></i> Buat Kelas</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </div>
 

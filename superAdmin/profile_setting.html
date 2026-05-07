@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan Profil - LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .setting-tabs .nav-link {
+            color: #6c757d; font-weight: 600; padding: 15px 20px; border-bottom: 3px solid transparent;
+        }
+        .setting-tabs .nav-link.active {
+            color: #0d6efd; border-bottom: 3px solid #0d6efd;
+        }
+    </style>
+</head>
+<body class="dashboard-page">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="school-logo">
+                <i class="fa-solid fa-school text-primary"></i>
+                <div>
+                    Sekolah<br>Nama Sekolah/ Kampus
+                </div>
+            </div>
+        </div>
+        
+        <div class="user-profile">
+            <img src="https://ui-avatars.com/api/?name=Staff+Komputer&background=e0e0e0&color=333" alt="User">
+            <div>
+                <div class="fw-bold">Staff Komputer</div>
+                <div class="text-muted small">Guru</div>
+            </div>
+        </div>
+
+        <div class="sidebar-actions">
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
+                    <span>Notifikasi</span> <i class="fa-solid fa-bell"></i>
+                </button>
+                <a href="profile.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill active bg-light text-dark">
+                    <span>Profil</span> <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
+            <a href="class_all.html" class="nav-link"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas</a>
+            <a href="#" class="nav-link"><i class="fa-solid fa-gear"></i> Pengaturan Website</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="d-flex align-items-center justify-content-between border rounded p-2 mb-2 bg-light">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="20"> <span class="fw-bold">Indonesia</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="16" class="opacity-50">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" width="16">
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline-secondary w-100 d-flex justify-content-between align-items-center rounded-pill mb-2 py-1">
+                <span>Keluar</span> <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+            <a href="../index.html" class="btn btn-light border w-100 rounded-pill py-1 text-muted">
+                Kembali ke halaman utama
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="topbar w-100">
+            <div class="d-flex align-items-center gap-3">
+                <a href="profile.html" class="btn btn-outline-secondary rounded-pill"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+                <h5 class="mb-0 fw-medium">Pengaturan</h5>
+            </div>
+        </div>
+
+        <div class="content-area bg-light p-0">
+            <ul class="nav bg-white px-3 mb-4">
+                <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-star text-primary"></i> Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-key"></i> Kata Sandi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Two-Factor</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Login</a></li>
+            </ul>
+            
+
+            <div class="px-4 pb-5">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm rounded-3 h-100">
+                            <div class="card-body p-4">
+                                <h6 class="fw-bold text-muted mb-4"><i class="fa-solid fa-id-card me-2"></i> Biodata Diri</h6>
+                                
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label small fw-bold text-muted">NAMA LENGKAP GURU</label>
+                                        <span class="text-danger small fw-bold">WAJIB DIISI</span>
+                                    </div>
+                                    <input type="text" class="form-control" value="Staff Komputer">
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label small fw-bold text-muted">NAMA PENDEK GURU</label>
+                                        <span class="text-danger small fw-bold">WAJIB DIISI</span>
+                                    </div>
+                                    <input type="text" class="form-control" value="Staff Komputer">
+                                </div>
+
+                                <div class="alert alert-info bg-info bg-opacity-10 border-0 text-dark small py-3 mb-4">
+                                    <div class="fw-bold mb-2 text-info-emphasis">Format nama yang diizinkan</div>
+                                    <ul class="mb-0 ps-3">
+                                        <li>Mengandung angka atau huruf didalamnya</li>
+                                        <li>Gunakan huruf besar atau huruf kecil</li>
+                                        <li>Simbol yang diizinkan ( , . ' ' ' ` - )</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label small fw-bold text-muted">EMAIL <span class="badge bg-warning text-dark ms-1">BELUM TERVERIFIKASI</span></label>
+                                    <input type="email" class="form-control mb-1" value="bcepbandung@gmail.com">
+                                    <small class="text-muted"><i class="fa-solid fa-circle-info"></i> Kami tidak membagikan alamat email Anda kepada siapapun.</small>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-muted">TEMPAT TANGGAL LAHIR</label>
+                                        <input type="text" class="form-control" placeholder="Masukan Tempat lahir">
+                                    </div>
+                                    <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-end">
+                                        <input type="date" class="form-control" value="2019-06-07">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-muted">JENIS KELAMIN</label>
+                                        <select class="form-select"><option>Pilih Jenis Kelamin</option></select>
+                                    </div>
+                                    <div class="col-md-6 mt-3 mt-md-0">
+                                        <label class="form-label small fw-bold text-muted">AGAMA</label>
+                                        <select class="form-select"><option>Pilih Agama</option></select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-muted">KEWARGANEGARAAN</label>
+                                        <select class="form-select"><option>Pilih Kewarganegaraan</option></select>
+                                    </div>
+                                    <div class="col-md-6 mt-3 mt-md-0">
+                                        <label class="form-label small fw-bold text-muted">PENDIDIKAN TERAKHIR</label>
+                                        <select class="form-select"><option>Pilih Pendidikan Terakhir</option></select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">TENTANG</label>
+                                    <textarea class="form-control" rows="4" placeholder="Deskripsi tentang diri Anda"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <h6 class="fw-bold text-muted mb-4"><i class="fa-regular fa-image me-2"></i> Pilih Foto Profil</h6>
+                                <label class="form-label small fw-bold text-muted">FOTO</label>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <h6 class="fw-bold text-muted mb-4"><i class="fa-solid fa-location-dot me-2"></i> Alamat</h6>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted">PROVINSI</label>
+                                        <select class="form-select"><option>Pilih Provinsi</option></select>
+                                    </div>
+                                    <div class="col-md-6 mt-3 mt-md-0">
+                                        <label class="form-label small text-muted">KOTA/KABUPATEN</label>
+                                        <select class="form-select text-muted"><option>Pilih Kota/Kabupaten</option></select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted">KECAMATAN</label>
+                                        <select class="form-select text-muted"><option>Pilih Kecamatan</option></select>
+                                    </div>
+                                    <div class="col-md-6 mt-3 mt-md-0">
+                                        <label class="form-label small text-muted">KODE POS</label>
+                                        <select class="form-select text-muted"><option>Pilih Kode Pos</option></select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="form-label small text-muted">ALAMAT</label>
+                                    <textarea class="form-control" rows="3">000</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm">Simpan Perubahan</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
