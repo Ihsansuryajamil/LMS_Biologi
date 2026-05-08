@@ -16,6 +16,7 @@
     --gc-text: #3c4043;
     --gc-blue: #1967d2;
     --primary-blue: #007bff;
+    --layout-header-height: 82px;
 }
 
 /* =========================================
@@ -223,8 +224,11 @@
 }
 
 .sidebar-header {
+    min-height: var(--layout-header-height);
     padding: 15px 20px;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
 }
 
 .school-logo {
@@ -355,7 +359,10 @@ body.sidebar-collapsed .main-content {
     z-index: 999;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
+    min-height: var(--layout-header-height);
     padding: 12px 30px;
+    display: flex;
+    align-items: center;
     /* Dihapus property flex dari sini agar fungsi w-100 di HTML bekerja dengan benar merapikan search bar */
 }
 
@@ -921,6 +928,7 @@ body.sidebar-collapsed .main-content {
 
     .topbar {
         padding: 10px 14px 10px 60px;
+        min-height: 72px;
     }
 
     .topbar .w-100 {
@@ -1038,6 +1046,10 @@ body.sidebar-collapsed .main-content {
 
     .main-content {
         padding-bottom: 76px;
+    }
+
+    .sidebar-footer {
+        padding-bottom: 92px;
     }
 }
 
