@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Saya - LMS Siswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/style_siswa.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="school-logo">
+                <i class="fa-solid fa-school text-primary"></i>
+                <div>Sekolah<br>Nama Sekolah/ Kampus</div>
+            </div>
+        </div>
+        <div class="user-profile">
+            <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=4f46e5&color=fff" alt="User">
+            <div>
+                <div class="fw-bold">Budi Santoso</div>
+                <div class="text-muted small">Siswa • IX-B</div>
+            </div>
+        </div>
+        <div class="sidebar-actions">
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
+                    <span>Notifikasi</span> <i class="fa-solid fa-bell"></i>
+                </button>
+                <a href="profil_siswa.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill bg-light text-dark">
+                    <span>Profil</span> <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard_siswa.html" class="nav-link"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
+            <a href="kelas_siswa.html" class="nav-link active"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas Saya</a>
+            <a href="tugas_siswa.html" class="nav-link"><i class="fa-solid fa-clipboard-list text-warning"></i> Tugas</a>
+            <a href="nilai_siswa.html" class="nav-link"><i class="fa-solid fa-star text-danger"></i> Nilai</a>
+            <a href="jadwal_siswa.html" class="nav-link"><i class="fa-solid fa-calendar-days text-info"></i> Jadwal</a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="d-flex align-items-center justify-content-between border rounded p-2 mb-2 bg-light">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="20"> <span class="fw-bold">Indonesia</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <img src="https://flagcdn.com/w20/id.png" alt="ID" width="16" class="opacity-50">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" width="16">
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline-secondary w-100 d-flex justify-content-between align-items-center rounded-pill mb-2 py-1">
+                <span>Keluar</span> <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+            <a href="../index.html" class="btn btn-light border w-100 rounded-pill py-1 text-muted">Kembali ke halaman utama</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="topbar d-flex align-items-center w-100">
+            <div class="d-flex align-items-center gap-3 w-100">
+                <span class="fw-bold"><i class="fa-solid fa-chalkboard"></i> Kelas Saya</span>
+                <select class="form-select w-auto"><option>Tahun Pelajaran 2025/2026 - (Aktif)</option></select>
+                <div class="input-group ms-auto" style="width: 250px;">
+                    <input type="text" class="form-control" placeholder="Cari kelas...">
+                    <button class="btn btn-outline-secondary"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                <div>
+                    <a href="#" class="text-decoration-none fw-bold border-bottom border-primary border-3 pb-2 text-dark">Kelas Aktif</a>
+                </div>
+                <span class="text-muted small">5 kelas terdaftar</span>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+
+                <!-- Card Kelas 1 -->
+                <div class="col">
+                    <div class="class-card">
+                        <div class="card-cover" style="background: linear-gradient(135deg,#4f46e5,#818cf8);">
+                            <span class="text-white small opacity-75"><i class="fa-regular fa-file-lines"></i> IX-B • Semester Ganjil</span>
+                        </div>
+                        <div style="background:#4f46e5; color:white; padding:8px 15px; font-size:0.8rem; display:flex; align-items:center; gap:10px;">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Materi:<br><strong>Informatika</strong></span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span><i class="fa-solid fa-users"></i> 30 Peserta</span>
+                                <span><i class="fa-regular fa-calendar"></i> 14/07/25</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="text-muted">Progress</span>
+                                    <span class="text-primary fw-bold">60%</span>
+                                </div>
+                                <div class="progress" style="height:6px; border-radius:10px;">
+                                    <div class="progress-bar bg-primary" style="width:60%;"></div>
+                                </div>
+                            </div>
+                            <a href="kelas_detail_siswa.html" class="btn btn-light w-100 text-primary border border-primary-subtle rounded-pill">Masuk Kelas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Kelas 2 -->
+                <div class="col">
+                    <div class="class-card">
+                        <div class="card-cover" style="background: linear-gradient(135deg,#16a34a,#4ade80);">
+                            <span class="text-white small opacity-75"><i class="fa-regular fa-file-lines"></i> IX-B • Semester Ganjil</span>
+                        </div>
+                        <div style="background:#16a34a; color:white; padding:8px 15px; font-size:0.8rem; display:flex; align-items:center; gap:10px;">
+                            <i class="fa-solid fa-square-root-variable"></i>
+                            <span>Materi:<br><strong>Matematika</strong></span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span><i class="fa-solid fa-users"></i> 30 Peserta</span>
+                                <span><i class="fa-regular fa-calendar"></i> 14/07/25</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="text-muted">Progress</span>
+                                    <span class="fw-bold" style="color:#16a34a;">45%</span>
+                                </div>
+                                <div class="progress" style="height:6px; border-radius:10px;">
+                                    <div class="progress-bar" style="width:45%; background:#16a34a;"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light w-100 text-success border border-success-subtle rounded-pill">Masuk Kelas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Kelas 3 -->
+                <div class="col">
+                    <div class="class-card">
+                        <div class="card-cover" style="background: linear-gradient(135deg,#ea580c,#fb923c);">
+                            <span class="text-white small opacity-75"><i class="fa-regular fa-file-lines"></i> IX-B • Semester Ganjil</span>
+                        </div>
+                        <div style="background:#ea580c; color:white; padding:8px 15px; font-size:0.8rem; display:flex; align-items:center; gap:10px;">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Materi:<br><strong>Bahasa Indonesia</strong></span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span><i class="fa-solid fa-users"></i> 30 Peserta</span>
+                                <span><i class="fa-regular fa-calendar"></i> 14/07/25</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="text-muted">Progress</span>
+                                    <span class="fw-bold" style="color:#ea580c;">80%</span>
+                                </div>
+                                <div class="progress" style="height:6px; border-radius:10px;">
+                                    <div class="progress-bar" style="width:80%; background:#ea580c;"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light w-100 text-warning border border-warning-subtle rounded-pill">Masuk Kelas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Kelas 4 -->
+                <div class="col">
+                    <div class="class-card">
+                        <div class="card-cover" style="background: linear-gradient(135deg,#dc2626,#f87171);">
+                            <span class="text-white small opacity-75"><i class="fa-regular fa-file-lines"></i> IX-B • Semester Ganjil</span>
+                        </div>
+                        <div style="background:#dc2626; color:white; padding:8px 15px; font-size:0.8rem; display:flex; align-items:center; gap:10px;">
+                            <i class="fa-solid fa-flask"></i>
+                            <span>Materi:<br><strong>IPA</strong></span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span><i class="fa-solid fa-users"></i> 30 Peserta</span>
+                                <span><i class="fa-regular fa-calendar"></i> 14/07/25</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="text-muted">Progress</span>
+                                    <span class="fw-bold text-danger">30%</span>
+                                </div>
+                                <div class="progress" style="height:6px; border-radius:10px;">
+                                    <div class="progress-bar bg-danger" style="width:30%;"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light w-100 text-danger border border-danger-subtle rounded-pill">Masuk Kelas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Kelas 5 -->
+                <div class="col">
+                    <div class="class-card">
+                        <div class="card-cover" style="background: linear-gradient(135deg,#0891b2,#67e8f9);">
+                            <span class="text-white small opacity-75"><i class="fa-regular fa-file-lines"></i> IX-B • Semester Ganjil</span>
+                        </div>
+                        <div style="background:#0891b2; color:white; padding:8px 15px; font-size:0.8rem; display:flex; align-items:center; gap:10px;">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Materi:<br><strong>IPS</strong></span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span><i class="fa-solid fa-users"></i> 30 Peserta</span>
+                                <span><i class="fa-regular fa-calendar"></i> 14/07/25</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="text-muted">Progress</span>
+                                    <span class="fw-bold" style="color:#0891b2;">55%</span>
+                                </div>
+                                <div class="progress" style="height:6px; border-radius:10px;">
+                                    <div class="progress-bar" style="width:55%; background:#0891b2;"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light w-100 text-info border border-info-subtle rounded-pill">Masuk Kelas</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

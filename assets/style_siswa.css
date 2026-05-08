@@ -1,0 +1,114 @@
+/* =========================================
+   STYLE TAMBAHAN UNTUK HALAMAN SISWA
+   File: assets/style_siswa.css
+   Extend dari style.css (guru/admin)
+========================================= */
+
+/* ===== SIDEBAR SISWA - Nav Menu ===== */
+/* Tambahan menu (Tugas, Nilai, Jadwal) sudah menggunakan class nav-link yang sama */
+
+/* ===== KELAS CARD — Progress Bar ===== */
+.class-card .progress {
+    height: 6px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+/* ===== BADGE MATA PELAJARAN ===== */
+.badge-mapel {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-mapel-blue   { background-color: #ede9fe; color: #4f46e5; }
+.badge-mapel-green  { background-color: #dcfce7; color: #16a34a; }
+.badge-mapel-orange { background-color: #ffedd5; color: #ea580c; }
+.badge-mapel-red    { background-color: #fee2e2; color: #dc2626; }
+.badge-mapel-cyan   { background-color: #e0f2fe; color: #0891b2; }
+
+/* ===== STATUS BADGE (Tugas) ===== */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pending { background-color: #fef3c7; color: #d97706; }
+.status-done    { background-color: #dcfce7; color: #16a34a; }
+.status-late    { background-color: #fee2e2; color: #dc2626; }
+.status-graded  { background-color: #e0f2fe; color: #0891b2; }
+
+/* ===== SUMMARY BADGE CARD (Halaman Tugas) ===== */
+.summary-badge-card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px 20px;
+    min-width: 130px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+}
+
+/* ===== KELAS ITEM MINI (Dashboard Widget) ===== */
+.kelas-item-mini {
+    transition: background 0.15s;
+}
+
+.kelas-item-mini:hover {
+    background-color: #f8f9fa;
+}
+
+.kelas-icon-mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ===== NILAI — Lingkaran Nilai ===== */
+.nilai-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ===== GRADE BADGE ===== */
+.grade-badge {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.grade-a { background-color: #dcfce7; color: #16a34a; }
+.grade-b { background-color: #fef9c3; color: #854d0e; }
+.grade-c { background-color: #fee2e2; color: #dc2626; }
+
+/* ===== JADWAL — Cell ===== */
+.jadwal-cell {
+    border-radius: 8px;
+    padding: 10px 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
