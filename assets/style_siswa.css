@@ -153,3 +153,198 @@
         font-size: 0.72rem;
     }
 }
+
+/* ===== KELAS DETAIL SISWA - DISKUSI & ANGGOTA ===== */
+
+/* Sub Tabs */
+.sub-tabs {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+
+.sub-tabs a {
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.sub-tabs a:hover {
+    color: #4f46e5;
+}
+
+.sub-tabs a.active {
+    color: #4f46e5;
+    border-bottom-color: #4f46e5;
+}
+
+/* Discussion Thread */
+.discussion-thread {
+    transition: all 0.2s ease;
+}
+
+.discussion-thread:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.discussion-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ede9fe;
+    border-radius: 8px;
+    color: #4f46e5;
+    font-size: 1.2rem;
+}
+
+/* Student Avatar */
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+}
+
+/* Table Styling for Members */
+.table-anggota {
+    font-size: 0.95rem;
+}
+
+.table-anggota thead th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.table-anggota tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Materi/Quiz/Tugas Item */
+.materi-item,
+.quiz-item,
+.tugas-item {
+    transition: all 0.2s ease;
+}
+
+.materi-item:hover,
+.quiz-item:hover,
+.tugas-item:hover {
+    background-color: #f9fafb;
+}
+
+.materi-list,
+.quiz-list,
+.tugas-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Modal Styling */
+.modal-content {
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #f9fafb;
+}
+
+/* Discussion Detail */
+.discussion-main {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.reply-item {
+    transition: all 0.2s ease;
+}
+
+.reply-item:hover {
+    background-color: #f9fafb;
+}
+
+.reply-form textarea {
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+}
+
+.reply-form textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Navigation tabs dalam modal */
+.nav-tabs .nav-link {
+    border-bottom: 2px solid transparent;
+    color: #6b7280;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #4f46e5;
+    border-bottom-color: #4f46e5;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    color: #4f46e5;
+    border-bottom-color: #4f46e5;
+}
+
+/* Topic Item */
+.topic-item {
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    border-left: 4px solid #4f46e5;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.topic-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .topic-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topic-item button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .table-anggota {
+        font-size: 0.85rem;
+    }
+
+    .student-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sub-tabs {
+        gap: 1rem;
+    }
+}
