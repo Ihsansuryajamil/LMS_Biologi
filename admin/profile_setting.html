@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengaturan Profil - LMS</title>
+    <title>Pengaturan Profil - LMS Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/style.css">
@@ -23,38 +23,33 @@
         <div class="sidebar-header">
             <div class="school-logo">
                 <i class="fa-solid fa-school text-primary"></i>
-                <div>
-                    Sekolah<br>Nama Sekolah/ Kampus
-                </div>
+                <div>Sekolah<br>Nama Sekolah/ Kampus</div>
             </div>
         </div>
-        
         <div class="user-profile">
-            <img src="https://ui-avatars.com/api/?name=Staff+Komputer&background=e0e0e0&color=333" alt="User">
+            <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=4f46e5&color=fff" alt="User">
             <div>
-                <div class="fw-bold">Staff Komputer</div>
-                <div class="text-muted small">Guru</div>
+                <div class="fw-bold">Budi Santoso</div>
+                <div class="text-muted small">Siswa • IX-B</div>
             </div>
         </div>
-
         <div class="sidebar-actions">
             <div class="d-flex gap-2">
-                <a href="notifikasi.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
+                <button class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
                     <span>Notifikasi</span> <i class="fa-solid fa-bell"></i>
-                </a>
-                <a href="profile.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill active bg-light text-dark">
+                </button>
+                <a href="profil_siswa.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill bg-light text-dark">
                     <span>Profil</span> <i class="fa-solid fa-user"></i>
                 </a>
             </div>
         </div>
-
         <nav class="nav-menu">
-            <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
-            <a href="class_all.html" class="nav-link"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas</a>
-            <a href="user_management.html" class="nav-link"><i class="fa-solid fa-users text-info"></i> Manajemen User</a>
-            <a href="pengaturan_website.html" class="nav-link"><i class="fa-solid fa-gear"></i> Pengaturan Website</a>
+            <a href="dashboard_siswa.html" class="nav-link"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
+            <a href="kelas_siswa.html" class="nav-link"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas Saya</a>
+            <a href="tugas_siswa.html" class="nav-link"><i class="fa-solid fa-clipboard-list text-warning"></i> Tugas</a>
+            <a href="nilai_siswa.html" class="nav-link"><i class="fa-solid fa-star text-danger"></i> Nilai</a>
+            <a href="jadwal_siswa.html" class="nav-link"><i class="fa-solid fa-calendar-days text-info"></i> Jadwal</a>
         </nav>
-
         <div class="sidebar-footer">
             <div class="d-flex align-items-center justify-content-between border rounded p-2 mb-2 bg-light">
                 <div class="d-flex align-items-center gap-2">
@@ -68,9 +63,7 @@
             <a href="../login.html" class="btn btn-outline-secondary w-100 d-flex justify-content-between align-items-center rounded-pill mb-2 py-1">
                 <span>Keluar</span> <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </a>
-            <a href="../index.html" class="btn btn-light border w-100 rounded-pill py-1 text-muted">
-                Kembali ke halaman utama
-            </a>
+            <a href="../index.html" class="btn btn-light border w-100 rounded-pill py-1 text-muted">Kembali ke halaman utama</a>
         </div>
     </div>
 
@@ -101,12 +94,17 @@
                                         <label class="form-label small fw-bold text-muted">NAMA LENGKAP</label>
                                         <span class="text-danger small fw-bold">WAJIB DIISI</span>
                                     </div>
-                                    <input type="text" class="form-control" value="Staff Komputer">
+                                    <input type="text" class="form-control" value="Budi Santoso">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold text-muted">NOMOR INDUK SISWA (NIS)</label>
+                                    <input type="text" class="form-control" value="2024001" disabled>
                                 </div>
 
                                 <div class="mb-4">
                                     <label class="form-label small fw-bold text-muted">EMAIL <span class="badge bg-success text-white ms-1">TERVERIFIKASI</span></label>
-                                    <input type="email" class="form-control mb-1" value="staff.komputer@email.com">
+                                    <input type="email" class="form-control mb-1" value="budi.santoso@email.com">
                                     <small class="text-muted"><i class="fa-solid fa-circle-info"></i> Kami tidak membagikan alamat email Anda kepada siapapun.</small>
                                 </div>
 

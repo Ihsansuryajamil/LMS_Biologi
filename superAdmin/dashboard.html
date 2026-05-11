@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 
-<body class="dashboard-page">
+<body class="dashboard-page text-sm">
 
     <div class="sidebar">
         <div class="sidebar-header">
@@ -41,6 +41,7 @@
         <nav class="nav-menu">
             <a href="dashboard.html" class="nav-link active"><i class="fa-solid fa-home text-primary"></i> Dashboard</a>
             <a href="class_all.html" class="nav-link"><i class="fa-solid fa-chalkboard-user text-success"></i> Kelas</a>
+            <a href="user_management.html" class="nav-link"><i class="fa-solid fa-users text-info"></i> Manajemen User</a>
             <a href="pengaturan_website.html" class="nav-link"><i class="fa-solid fa-gear"></i> Pengaturan Website</a>
         </nav>
 
@@ -137,20 +138,59 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center bottom-nav-pills px-3">
-            <div class="bg-white rounded-2 shadow-sm d-inline-flex border overflow-hidden flex-wrap">
-                <a href="#" class="btn btn-light bg-white border-end border-0 rounded-0 fw-medium text-dark text-decoration-none px-4 py-2 text-start">
-                    Lihat Aktivitas Saya <i class="fa-solid fa-list ms-2 text-muted"></i>
-                </a>
-                <a href="#" class="btn btn-light bg-white border-end border-0 rounded-0 fw-medium text-dark text-decoration-none px-4 py-2 text-start">
-                    Jadwal Saya <i class="fa-solid fa-calendar ms-2 text-muted"></i>
-                </a>
-                <a href="#" class="btn btn-light bg-white border-end border-0 rounded-0 fw-medium text-dark text-decoration-none px-4 py-2 text-start">
-                    Proses Pembelajaran <i class="fa-solid fa-bolt ms-2 text-muted"></i>
-                </a>
-                <a href="#" class="btn btn-light bg-white rounded-0 fw-medium text-dark text-decoration-none px-4 py-2 text-start border-0">
-                    Riwayat Login <i class="fa-solid fa-clock ms-2 text-muted"></i>
-                </a>
+        <div class="content-area">
+            <div class="notification-list">
+                <div class="notification-item unread">
+                    <span class="notification-icon bg-primary-subtle text-primary"><i class="fa-solid fa-user-plus"></i></span>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <div class="fw-semibold">Permintaan bergabung kelas baru</div>
+                                <div class="text-muted small">12 siswa meminta akses ke kelas "IX-B Informatika".</div>
+                            </div>
+                            <small class="text-muted">Baru saja</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-item unread">
+                    <span class="notification-icon bg-success-subtle text-success"><i class="fa-solid fa-clipboard-check"></i></span>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <div class="fw-semibold">Tugas telah dipublikasikan</div>
+                                <div class="text-muted small">Tugas "Laporan Praktikum Sistem Komputer" berhasil dipublikasikan.</div>
+                            </div>
+                            <small class="text-muted">5 menit lalu</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-item">
+                    <span class="notification-icon bg-warning-subtle text-warning"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <div class="fw-semibold">Ada 4 tugas terlambat dikumpulkan</div>
+                                <div class="text-muted small">Periksa detail pengumpulan pada kelas "IX-B Matematika".</div>
+                            </div>
+                            <small class="text-muted">1 jam lalu</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-item">
+                    <span class="notification-icon bg-info-subtle text-info"><i class="fa-solid fa-gear"></i></span>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <div class="fw-semibold">Pengaturan website berhasil diperbarui</div>
+                                <div class="text-muted small">Nama website dan hero index diperbarui oleh Super Admin.</div>
+                            </div>
+                            <small class="text-muted">Kemarin</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

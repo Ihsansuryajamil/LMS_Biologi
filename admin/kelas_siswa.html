@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/style.css">
-    <link rel="stylesheet" href="../assets/style_siswa.css">
 </head>
-<body class="dashboard-page">
+<body class="dashboard-page text-sm">
 
     <div class="sidebar">
         <div class="sidebar-header">
@@ -27,9 +26,10 @@
         </div>
         <div class="sidebar-actions">
             <div class="d-flex gap-2">
-                <button class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill">
+                <a href="notifikasi.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill bg-light text-dark">
                     <span>Notifikasi</span> <i class="fa-solid fa-bell"></i>
-                </button>
+                </a>
+            </a>
                 <a href="profil_siswa.html" class="btn btn-outline-secondary w-50 d-flex justify-content-between align-items-center rounded-pill bg-light text-dark">
                     <span>Profil</span> <i class="fa-solid fa-user"></i>
                 </a>
@@ -73,15 +73,21 @@
         </div>
 
         <div class="content-area">
-            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
-                <div>
-                    <a href="#" class="text-decoration-none fw-bold border-bottom border-primary border-3 pb-2 text-dark">Kelas Aktif</a>
-                </div>
-                <a href="kelas_tambah.html" class="btn btn-sm border-3 rounded-pill text-white" style="background: #0d6efd;"><i class="fa-solid fa-plus"></i> Masuk Kelas</a>
-            
+            <!-- Tab Navigation & Button - Aligned -->
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-2 flex-wrap gap-3">
+                <ul class="nav nav-tabs mb-0" id="kelasTab" style="flex: 1; min-width: 0;">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="#" data-tab="aktif" onclick="switchKelasTab(event, 'aktif')">Kelas Aktif <span class="badge bg-primary rounded-pill ms-2">5</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="kelas_belum_disetujui_siswa.html" title="Kelas Non-Aktif">Kelas Non-Aktif <span class="badge bg-warning rounded-pill ms-2">1</span></a>
+                    </li>
+                </ul>
+                <button class="btn btn-sm border-3 rounded-pill text-white" style="background: #0d6efd; white-space: nowrap;" onclick="showJoinClassModal()"><i class="fa-solid fa-plus"></i> Masuk Kelas</button>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+            <div id="aktif-tab" class="tab-content">
+                <div class="row row-cols-2 row-cols-md-2 row-cols-xl-4 g-4">
 
                 <!-- Card Kelas 1 -->
                 <div class="col">
@@ -232,7 +238,80 @@
         </div>
     </div>
 
+    <!-- Modal Masuk Kelas -->
+    <div class="modal fade" id="joinClassModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header border-bottom bg-light">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-key me-2"></i> Masuk Kelas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted mb-3">Masukkan kode kelas yang diberikan oleh guru untuk bergabung dengan kelas.</p>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Kode Kelas</label>
+                        <input type="text" class="form-control form-control-lg" id="classCode" placeholder="Contoh: INF2024" maxlength="20">
+                        <small class="text-muted">Kode kelas terdiri dari huruf dan angka</small>
+                    </div>
+                    <div class="alert alert-info bg-info bg-opacity-10 border-0 mb-0">
+                        <small><i class="fa-solid fa-circle-info me-2"></i> Masukkan kode kelas dengan benar. Kelas yang bergabung akan menunggu persetujuan dari guru.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary rounded-pill" onclick="joinClassWithCode()"><i class="fa-solid fa-check"></i> Masuk Kelas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/sidebar-toggle.js"></script>
+
+    <script>
+        function showJoinClassModal() {
+            const modal = new bootstrap.Modal(document.getElementById('joinClassModal'));
+            modal.show();
+        }
+
+        function joinClassWithCode() {
+            const classCode = document.getElementById('classCode').value.trim().toUpperCase();
+            
+            if (!classCode) {
+                alert('Silakan masukkan kode kelas');
+                return;
+            }
+            
+            if (classCode.length < 3) {
+                alert('Kode kelas minimal 3 karakter');
+                return;
+            }
+            
+            // Simulasi bergabung dengan kelas
+            const modal = bootstrap.Modal.getInstance(document.getElementById('joinClassModal'));
+            modal.hide();
+            
+            // Reset input
+            document.getElementById('classCode').value = '';
+            
+            // Tampilkan pesan sukses
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
+            alertDiv.style.top = '20px';
+            alertDiv.style.right = '20px';
+            alertDiv.style.zIndex = '9999';
+            alertDiv.role = 'alert';
+            alertDiv.innerHTML = `
+                <i class="fa-solid fa-check-circle"></i> <strong>Berhasil!</strong> Anda telah mendaftar kelas dengan kode <strong>${classCode}</strong>. Menunggu persetujuan dari guru.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            document.body.appendChild(alertDiv);
+            
+            // Redirect ke halaman kelas belum disetujui
+            setTimeout(() => {
+                window.location.href = 'kelas_belum_disetujui_siswa.html';
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
