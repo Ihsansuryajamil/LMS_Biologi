@@ -1736,3 +1736,123 @@ body.sidebar-collapsed .main-content {
         line-height: 1.2;
     }
 }
+
+/* ===== ERROR PAGES ===== */
+
+.error-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.error-page .card {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.error-page .error-header {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.error-page .error-code {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #0d6efd;
+}
+
+.error-page .error-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.error-page .error-text {
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.error-page .error-icon {
+    width: 68px;
+    height: 68px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: rgba(13, 110, 253, 0.08);
+    color: #0d6efd;
+    font-size: 1.5rem;
+}
+
+.error-page .btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.error-page .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+.error-page .alert {
+    border-radius: 16px;
+    border: 1px solid rgba(13, 110, 253, 0.12);
+}
+
+.error-page .alert-info {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}
+
+.error-page .alert-warning {
+    background-color: #fff4e5;
+    color: #d97706;
+    border-color: rgba(217, 119, 6, 0.16);
+}
+
+/* Responsive Error Pages */
+@media (max-width: 768px) {
+    .error-page .error-code {
+        font-size: 4.5rem;
+    }
+
+    .error-page .error-title {
+        font-size: 1.75rem;
+    }
+
+    .error-page .card-body {
+        padding: 2rem 1.5rem;
+    }
+
+    .error-page .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .error-page .error-code {
+        font-size: 3.5rem;
+    }
+
+    .error-page .error-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.25rem;
+    }
+
+    .error-page .error-title {
+        font-size: 1.5rem;
+    }
+
+    .error-page .error-text {
+        font-size: 0.95rem;
+    }
+
+    .error-page .card-body {
+        padding: 1.5rem 1rem;
+    }
+}
